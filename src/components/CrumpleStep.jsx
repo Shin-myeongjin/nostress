@@ -39,7 +39,7 @@ const CrumpleStep = ({ items, onDone }) => {
           </div>
         )}
         {phase === 'done' && (
-          <div className={styles.ball}>🗒️</div>
+          <div className={styles.ball}>🪨</div>
         )}
       </div>
     </div>

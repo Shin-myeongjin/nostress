@@ -94,8 +94,8 @@ const ThrowStep = ({ onThrow }) => {
 
   const stickmanPose =
     phase === 'flying' ? 'throw' :
-    charge > 0.05 ? 'charge' :
-    phase === 'enter' ? 'walk' : 'hold';
+      charge > 0.05 ? 'charge' :
+        phase === 'enter' ? 'walk' : 'hold';
 
   return (
     <div
@@ -119,7 +119,7 @@ const ThrowStep = ({ onThrow }) => {
           className={styles.flyingBall}
           style={{ bottom: `calc(200px + ${ballY}px)` }}
         >
-          🗒️
+          🪨
         </div>
       )}
 

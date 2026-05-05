@@ -32,7 +32,7 @@
   background: #f5f0e8;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   animation: crumple 1.6s ease-in forwards;
   transform-origin: center center;
 }
@@ -60,12 +60,36 @@
 
 /* 구겨지는 애니메이션 */
 @keyframes crumple {
-  0% { transform: scale(1) rotate(0deg); border-radius: 8px; }
-  20% { transform: scale(0.92) rotate(-3deg); border-radius: 12px; }
-  40% { transform: scale(0.8) rotate(5deg); border-radius: 20px; }
-  60% { transform: scale(0.65) rotate(-8deg); border-radius: 30px; }
-  80% { transform: scale(0.5) rotate(10deg); border-radius: 40px; }
-  100% { transform: scale(0.3) rotate(-5deg); border-radius: 50%; opacity: 0; }
+  0% {
+    transform: scale(1) rotate(0deg);
+    border-radius: 8px;
+  }
+
+  20% {
+    transform: scale(0.92) rotate(-3deg);
+    border-radius: 12px;
+  }
+
+  40% {
+    transform: scale(0.8) rotate(5deg);
+    border-radius: 20px;
+  }
+
+  60% {
+    transform: scale(0.65) rotate(-8deg);
+    border-radius: 30px;
+  }
+
+  80% {
+    transform: scale(0.5) rotate(10deg);
+    border-radius: 40px;
+  }
+
+  100% {
+    transform: scale(0.3) rotate(-5deg);
+    border-radius: 50%;
+    opacity: 0;
+  }
 }
 
 /* 종이뭉치 */
@@ -74,12 +98,22 @@
 }
 
 @keyframes popIn {
-  0% { transform: scale(0); opacity: 0; }
-  70% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .ball {
   font-size: 72px;
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
 }

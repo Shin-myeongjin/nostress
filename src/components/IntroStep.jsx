@@ -21,12 +21,12 @@ const IntroStep = ({ onDone }) => {
     <div className={styles.container} onClick={step > 0 ? onDone : undefined}>
       <div className={styles.inner}>
         {/* 텍스트 영역 */}
-      <div className={styles.textArea}>
-        <p className={`${styles.text} ${step >= 1 ? styles.visible : ''}`}>너.. 오늘</p>
-        <p className={`${styles.text} ${step >= 2 ? styles.visible : ''}`}>스트레스 받았구나</p>
-        <p className={`${styles.text} ${step >= 3 ? styles.visible : ''}`}>다 털어놔봐</p>
-        <p className={`${styles.subText} ${step >= 4 ? styles.visible : ''}`}>아무데나 클릭하기</p>
-      </div>
+        <div className={styles.textArea}>
+          <p className={`${styles.text} ${step >= 1 ? styles.visible : ''}`}>오늘 하루도 고생했어</p>
+          <p className={`${styles.text} ${step >= 2 ? styles.visible : ''}`}>여기서</p>
+          <p className={`${styles.text} ${step >= 3 ? styles.visible : ''}`}>스트레스 풀고 가</p>
+          <p className={`${styles.subText} ${step >= 4 ? styles.visible : ''}`}>아무데나 클릭하기</p>
+        </div>
 
         <div className={styles.characterArea}>
           <img src={manImg} alt="소년" className={styles.character} />
