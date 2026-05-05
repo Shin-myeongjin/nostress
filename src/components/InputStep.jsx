@@ -20,9 +20,9 @@ const InputStep = ({ onDone }) => {
     if (e.key === 'Enter') handleAdd();
   };
 
-  // 항목 추가될 때 스크롤 맨 아래로
+  // 항목 추가될 때, 항목이 많아서 넘칠 때만 스크롤 맨 아래로 이동
   useEffect(() => {
-    if (listRef.current) {
+    if (listRef.current && items.length >= 8) {
       listRef.current.scrollTop = listRef.current.scrollHeight;
     }
   }, [items]);
