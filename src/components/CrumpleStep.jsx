@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './CrumpleStep.module.css';
 import checkImg from '../assets/check.png';
+import paperImg from '../assets/paper.png';
 
 const CrumpleStep = ({ items, onDone }) => {
   const [phase, setPhase] = useState('crumpling'); // 'crumpling' | 'done'
@@ -39,7 +40,7 @@ const CrumpleStep = ({ items, onDone }) => {
           </div>
         )}
         {phase === 'done' && (
-          <div className={styles.ball}>🪨</div>
+          <img src={paperImg} alt="crumpled paper" className={styles.ball} />
         )}
       </div>
     </div>

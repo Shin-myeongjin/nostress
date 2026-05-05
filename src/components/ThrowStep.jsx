@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Stickman from './Stickman';
 import styles from './ThrowStep.module.css';
+import paperImg from '../assets/paper.png';
 
 const MAX_HOLD = 3000; // 최대 3초
 
@@ -115,12 +116,12 @@ const ThrowStep = ({ onThrow }) => {
 
       {/* 날아가는 종이뭉치 */}
       {phase === 'flying' && (
-        <div
+        <img
+          src={paperImg}
+          alt="flying paper"
           className={styles.flyingBall}
           style={{ bottom: `calc(200px + ${ballY}px)` }}
-        >
-          🪨
-        </div>
+        />
       )}
 
       {/* 게이지 바 */}

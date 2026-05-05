@@ -114,6 +114,8 @@
 }
 
 .ball {
-  font-size: 72px;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
   filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
 }
