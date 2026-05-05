@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './CrumpleStep.module.css';
+import checkImg from '../assets/check.png';
 
 const CrumpleStep = ({ items, onDone }) => {
   const [phase, setPhase] = useState('crumpling'); // 'crumpling' | 'done'
@@ -29,7 +30,10 @@ const CrumpleStep = ({ items, onDone }) => {
           <div className={styles.paperSheet}>
             <ul className={styles.list}>
               {items.map((item, i) => (
-                <li key={i}>✦ {item}</li>
+                <li key={i} className={styles.listItem}>
+                  <img src={checkImg} alt="check" className={styles.checkIcon} />
+                  <span>{item}</span>
+                </li>
               ))}
             </ul>
           </div>
