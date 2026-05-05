@@ -29,9 +29,10 @@ const InputStep = ({ onDone }) => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>스트레스 받은거<br />여기 다적어봐</h1>
-      
-      <div className={styles.notebookArea}>
+      <div className={styles.inner}>
+        <h1 className={styles.title}>스트레스 받은거<br />여기 다적어봐</h1>
+        
+        <div className={styles.notebookArea}>
         <div className={styles.listContainer} ref={listRef}>
           {items.map((item, i) => (
             <div key={i} className={styles.listItem}>
@@ -67,6 +68,7 @@ const InputStep = ({ onDone }) => {
         >
           다적었어! 이제 꾸겨서 날려버리자
         </button>
+      </div>
       </div>
     </div>
   );
