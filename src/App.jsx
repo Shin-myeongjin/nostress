@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
+import IntroStep from './components/IntroStep';
 import InputStep from './components/InputStep';
 import CrumpleStep from './components/CrumpleStep';
 import ThrowStep from './components/ThrowStep';
 import ResultStep from './components/ResultStep';
 
-// step: 'input' | 'crumple' | 'throw' | 'result'
+// step: 'intro' | 'input' | 'crumple' | 'throw' | 'result'
 const App = () => {
-  const [step, setStep] = useState('input');
+  const [step, setStep] = useState('intro');
   const [items, setItems] = useState([]);
   const [chargeLevel, setChargeLevel] = useState(0);
+
+  const handleIntroDone = () => {
+    setStep('input');
+  };
 
   const handleInputDone = (stressItems) => {
     setItems(stressItems);
@@ -27,11 +32,14 @@ const App = () => {
   const handleReset = () => {
     setItems([]);
     setChargeLevel(0);
-    setStep('input');
+    setStep('intro');
   };
 
   return (
     <>
+      {step === 'intro' && (
+        <IntroStep onDone={handleIntroDone} />
+      )}
       {step === 'input' && (
         <InputStep onDone={handleInputDone} />
       )}
