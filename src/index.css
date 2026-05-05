@@ -34,8 +34,11 @@ html, body {
 
 body {
   font-family: 'Kkubulim', 'Noto Sans KR', sans-serif;
-  background: var(--bg);
-  color: var(--white);
+  background-image: url('./assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #191919;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -45,7 +48,7 @@ body {
   width: 100%;
   min-height: 100dvh;
   position: relative;
-  background: var(--bg);
+  background: transparent;
   display: flex;
   flex-direction: column;
 }

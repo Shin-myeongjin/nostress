@@ -14,9 +14,9 @@ const ResultStep = ({ chargeLevel, onReset }) => {
   const power = Math.round(chargeLevel * 100);
   const powerLabel =
     power < 30 ? '살짝 힘들었구나 🥺' :
-    power < 60 ? '꽤 힘들었네 😤' :
-    power < 85 ? '많이 힘들었다 😭' :
-    '진짜 많이 힘들었구나 😱';
+      power < 60 ? '꽤 힘들었네 😤' :
+        power < 85 ? '많이 힘들었다 😭' :
+          '진짜 많이 힘들었구나 😱';
 
   return (
     <div className={`${styles.container} ${visible ? styles.visible : ''}`}>
@@ -43,11 +43,11 @@ const ResultStep = ({ chargeLevel, onReset }) => {
         </div>
 
         {/* 이모지 */}
-        <div className={styles.emoji}>🌟</div>
+        <div className={styles.emoji}>👍</div>
       </div>
 
       <button className={styles.resetBtn} onClick={onReset}>
-        한번 더 털어버릴래 🔄
+        한번 더 털어버릴래!
       </button>
     </div>
   );

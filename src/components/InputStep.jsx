@@ -13,7 +13,7 @@ const InputStep = ({ onDone }) => {
     if (!trimmed) return;
     setItems(prev => [...prev, trimmed]);
     setInput('');
-    inputRef.current?.focus();
+    inputRef.current?.blur();
   };
 
   const handleKeyDown = (e) => {
